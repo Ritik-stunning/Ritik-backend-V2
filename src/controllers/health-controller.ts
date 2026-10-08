@@ -4,7 +4,7 @@ import { redis } from "../config/redis";
 
 async function isDbUp(): Promise<boolean> {
   try {
-    await AppDataSource.query("SELECT 1");
+    await AppDataSource.query("SELECT 1");  
     return true;
   } catch {
     return false;
